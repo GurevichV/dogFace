@@ -1,0 +1,78 @@
+{
+  "sitters":[
+        {
+            "id": 1, "name": "Victoria", "lastName": "Gurevich", "email": "test@test.com", 
+            "location": {
+                "name": "Bat Yam, Israel",
+                "coordinates":{
+                    "lat": 32.013186,
+                    "lng": 34.748019
+                }},
+            "openDates": "",
+            "typeOfdogs":[
+                {
+                    "mini": true,
+                    "small": true,
+                    "medium": true,
+                    "big": true,
+                    "huge": false
+            }
+            ],
+            "services": {
+                    "boarding": true,
+                    "day_care" : true,
+                    "walking": true
+            }
+        },
+        {
+            "id": 2, "name": "Ilia", "lastName": "Gurevich", "email": "test@test.com", 
+            "location": {
+                "name": "Bat Yam, Israel",
+                "coordinates":{
+                    "lat": 32.013186,
+                    "lng": 34.748019
+                }},
+            "openDates": "",
+            "typeOfdogs":[
+                {
+                    "mini": true,
+                    "small": true,
+                    "medium": true,
+                    "big": true,
+                    "huge": false
+            }
+            ],
+            "services":
+                {
+                    "boarding": true,
+                    "day_care" : true,
+                    "walking": false
+                }
+        },
+        {
+            "id": 3, "name": "Ilia", "lastName": "Gurevich", "email": "test@test.com", 
+            "location": {
+                "name": "Bat Yam, Israel",
+                "coordinates":{
+                    "lat": 32.0852999,
+                    "lng": 34.78176759999999
+                }},
+            "openDates": "",
+            "typeOfdogs":[
+                {
+                    "mini": true,
+                    "small": true,
+                    "medium": true,
+                    "big": true,
+                    "huge": false
+            }
+            ],
+            "services": 
+                {
+                    "boarding": false,
+                    "day_care" : true,
+                    "walking": true
+                }
+        }
+    ]
+}
