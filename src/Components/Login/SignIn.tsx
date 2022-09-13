@@ -4,6 +4,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import BasicInput from './BasicInput';
+import { getSignUpFormModel } from './models/sign-in.model';
+
 
 import './Login.sass';
 
@@ -23,10 +25,13 @@ const SignIn = () =>{
             alert(`Login: ${formBasicEmail}, password: ${formBasicPassword}`)
         }
     })
-    const dataInputs = [
-        {id: 'formBasicEmail', label: 'Email', values: values.formBasicEmail, handleChange, handleBlur, type: 'email', touched: touched.formBasicEmail, errors: errors.formBasicEmail },
-        {id: 'formBasicPassword', label: 'Password', values: values.formBasicPassword, handleChange, handleBlur, type: 'password',  touched: touched.formBasicPassword, errors: errors.formBasicPassword},  
-    ]
+    const formModel = getSignUpFormModel({
+        values,
+        touched,
+        errors,
+        handleChange ,
+        handleBlur
+    })
 
     return(
         <Container >
@@ -36,7 +41,7 @@ const SignIn = () =>{
                         <h1>Sign In</h1>
                         <Form onSubmit={handleSubmit}>
 
-                            {dataInputs.map((item) =>{
+                            {formModel.map((item) =>{
                                 return <BasicInput data={item} />
                             })}
 
