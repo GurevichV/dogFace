@@ -10,11 +10,11 @@ function App() {
 
   return (
     <>
-      {pathname === '/signin' || '/signup' ? null : <Header />}
+      <Header />
       <div className="main">
         <ProjectRoutes />
       </div>
-      {pathname === '/signin' || '/signup' ? null : <Footer />}
+      {pathname === '/signin' || pathname ===  '/signup' ? null : <Footer />}
     </>
   );
 }
