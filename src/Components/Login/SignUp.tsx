@@ -42,7 +42,7 @@ const SignUp = () => {
             <div className='login-container'>
                 <Row>
                     <Col xs={12} >
-                        <h1>Sign In</h1>
+                        <h1>Sign Up</h1>
                         <Form onSubmit={handleSubmit}>
 
                             {formModel.map((item) => {
