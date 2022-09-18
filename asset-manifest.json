@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dogFace/static/css/main.4644fffc.css",
-    "main.js": "/dogFace/static/js/main.f142dee2.js",
+    "main.js": "/dogFace/static/js/main.2854ee94.js",
     "index.html": "/dogFace/index.html",
     "main.4644fffc.css.map": "/dogFace/static/css/main.4644fffc.css.map",
-    "main.f142dee2.js.map": "/dogFace/static/js/main.f142dee2.js.map"
+    "main.2854ee94.js.map": "/dogFace/static/js/main.2854ee94.js.map"
   },
   "entrypoints": [
     "static/css/main.4644fffc.css",
-    "static/js/main.f142dee2.js"
+    "static/js/main.2854ee94.js"
   ]
 }
