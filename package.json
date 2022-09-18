@@ -34,7 +34,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b main -d build",
     "start": "concurrently \"react-scripts start\" \"npx json-server sitters.json --port 3001\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
