@@ -1,5 +1,6 @@
 const initialState = {
-    sitters: []
+    sitters: [],
+    user_info: {} 
 }
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -8,6 +9,16 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 sitters: [...action.payload]
 
+            }
+        case 'SET_USER_INFO':
+            return{
+                ...state,
+                user_info: {...action.payload}
+            }
+        case 'CLEAR_USER_INFO':
+            return{
+                ...state,
+                user_info: {}
             }
         default: return state
 
