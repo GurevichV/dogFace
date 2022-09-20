@@ -1,11 +1,10 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import Search from '../Components/Search/Search';
 import SearchMap from '../Components/Search/SearchMap';
 
 const SearchPage = () => {
     const { sitters } = useSelector(state => state) as any;
-    console.log()
+
     return(
         <div>
             <h1>SearchPage</h1>

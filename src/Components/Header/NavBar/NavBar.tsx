@@ -1,13 +1,24 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useLocation, Link } from 'react-router-dom';
-
-
+import {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import {  Link } from 'react-router-dom';
+import AuthButtons from './AuthButtons';
+import ProfileMenu from './ProfileMenu';
+import { setUserInfo } from '../../../actions';
 
 function NavBar() {
-const { pathname } = useLocation();
+
+const {user_info} = useSelector(state => state) as any;
+const dispatch = useDispatch();
+
+
+useEffect(() => {
+  const user_info = JSON.parse(localStorage.getItem('user-info'))
+  dispatch(setUserInfo(user_info))
+  console.log(user_info, 'from navbar')
+}, []);
+
+
   return (
     <Navbar collapseOnSelect expand="lg"  variant="light">
       <Container>
@@ -29,12 +40,7 @@ const { pathname } = useLocation();
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            {pathname === '/signin'  ? null :  <Nav.Link as={Link} to="/signin">Sign In</Nav.Link> }
-            {pathname === '/signup'  ? null :  <Nav.Link eventKey={2} as={Link} to="/signup">
-              Sign Up
-            </Nav.Link> }
-          </Nav>
+          { Object.keys(user_info).length === 0 ? <AuthButtons/> : <ProfileMenu name={user_info.name}/>}
         </Navbar.Collapse>
       </Container>
     </Navbar>
