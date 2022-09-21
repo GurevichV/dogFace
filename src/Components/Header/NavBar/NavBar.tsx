@@ -15,7 +15,6 @@ const dispatch = useDispatch();
 useEffect(() => {
   const user_info = JSON.parse(localStorage.getItem('user-info'))
   dispatch(setUserInfo(user_info))
-  console.log(user_info, 'from navbar')
 }, []);
 
 
