@@ -4,9 +4,12 @@ import Page404 from "./Pages/404Page";
 import SignIn from './Components/Login/SignIn'
 import SignUp from './Components/Login/SignUp'
 import SearchPage from './Pages/SearchPage';
-import Profile from './Pages/Profile';
+import ProfilePage from './Pages/ProfilePage';
 import ProtectedRoute from "./ProtectedRoute";
-
+import DogPage from "./Pages/DogPage";
+import DogsitterPage from "./Pages/DogsitterPage";
+import SettingsPage from "./Pages/SettingsPage";
+import UserPage from "./Pages/UserPage";
 
 const ProjectRoutes = () => {
     return (
@@ -15,11 +18,27 @@ const ProjectRoutes = () => {
             <Route exact path="/search" element={<SearchPage />} />
             <Route exact path="/signin" element={<SignIn/>} />
             <Route exact path="/signup" element={<SignUp/>} />
-            <Route path="/profile"element={ 
+            <Route path="/user"element={ 
                                 <ProtectedRoute>
-                                    <Profile/> 
-                                </ProtectedRoute>  }
-            />
+                                    <UserPage/> 
+                                </ProtectedRoute>  } >
+                  <Route path="profile"element={ 
+                                <ProtectedRoute>
+                                    <ProfilePage/> 
+                                </ProtectedRoute> } />
+                <Route path="my-dogs"element={ 
+                                    <ProtectedRoute>
+                                        <DogPage/> 
+                                    </ProtectedRoute>  } />
+                <Route path="dogsitter"element={ 
+                                    <ProtectedRoute>
+                                        <DogsitterPage/> 
+                                    </ProtectedRoute>  }/>
+                <Route path="settings"element={ 
+                                    <ProtectedRoute>
+                                        <SettingsPage/> 
+                                    </ProtectedRoute>  }/>
+            </Route>
             <Route path="*" element={<Page404 />} />
         </Routes>
     )

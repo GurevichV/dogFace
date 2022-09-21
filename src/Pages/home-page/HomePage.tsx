@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
-import Search from '../../Components/Search/Search';
+import Search from '../../Components/search/Search';
 import './HomePage.sass';
 
 const HomePage = () => {

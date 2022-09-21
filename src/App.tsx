@@ -1,6 +1,6 @@
 import ProjectRoutes from './Routes';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/footer/Footer';
 import './App.sass';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

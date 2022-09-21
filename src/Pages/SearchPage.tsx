@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import Search from '../Components/Search/Search';
-import SearchMap from '../Components/Search/SearchMap';
+import Search from '../Components/search/Search';
+import SearchMap from '../Components/search/SearchMap';
 
 const SearchPage = () => {
     const { sitters } = useSelector(state => state) as any;

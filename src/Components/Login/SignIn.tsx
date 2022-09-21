@@ -34,7 +34,7 @@ const SignIn = () =>{
             login(item).then((result) => {
                 localStorage.setItem('user-info', JSON.stringify(result));
                 dispatch(setUserInfo(result))
-                navigate('/profile')
+                navigate('/user/profile')
             })
         }
     })
