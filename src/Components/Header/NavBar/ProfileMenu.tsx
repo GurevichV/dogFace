@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 import {Nav , NavDropdown} from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, Outlet } from 'react-router-dom';
 import { clearUserInfo } from '../../../actions';
+
 
 
 const ProfileMenu = (props) => {
@@ -18,20 +19,18 @@ const ProfileMenu = (props) => {
       }
 
     return(
+      <>
         <Nav>
             <NavDropdown title={props.name} id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/my-dog">
-                My Dog
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/dogsitter">Dogsitter</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/dogsitter">Settings</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="user/profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="user/my-dogs">My Dog</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="user/dogsitter">Dogsitter</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="user/settings">Settings</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item onClick={logOut} as={Link} to="/dog-traning">
-                Log Out
-              </NavDropdown.Item>
+              <NavDropdown.Item onClick={logOut} as={Link} to="/signin">Log Out</NavDropdown.Item>
             </NavDropdown>
         </Nav>
+      </>
     )
 
 }

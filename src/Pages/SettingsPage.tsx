@@ -1,11 +1,9 @@
-import AccountMenu from '../Components/account-menu/AccountMenu'
 
 const SettingsPage = () => {
 
     return(
         <div>
-            <AccountMenu/>
-            <h1>SettingsPage Page</h1> 
+            <h1>Settings Page</h1> 
         </div>
     )
 

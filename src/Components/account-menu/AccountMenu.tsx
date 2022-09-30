@@ -1,22 +1,27 @@
 import Nav from 'react-bootstrap/Nav';
-import {Link} from 'react-router-dom'
+import {  Outlet, NavLink} from 'react-router-dom'
+import './AccountMenu.sass'
 
 const AccountMenu = () =>{
+
     return(
-        <Nav fill >
+      <>
+        <Nav fill activeKey="profile">
         <Nav.Item>
-          <Nav.Link as={Link} to="profile">Profile</Nav.Link>
+          <Nav.Link as={NavLink}  to="profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="my-dogs">Dog</Nav.Link>
+          <Nav.Link as={NavLink} to="my-dogs">Dog</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="dogsitter">Dogsitter</Nav.Link>
+          <Nav.Link as={NavLink} to="dogsitter">Dogsitter</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="settings" >Settings</Nav.Link>
+          <Nav.Link as={NavLink} to="settings" >Settings</Nav.Link>
         </Nav.Item>
       </Nav>
+      <Outlet />
+      </>
     )
 }
 

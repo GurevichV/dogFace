@@ -14,15 +14,16 @@ import UserPage from "./Pages/UserPage";
 const ProjectRoutes = () => {
     return (
         <Routes>
-            <Route exact path="/" element={<HomePage />} />
-            <Route exact path="/search" element={<SearchPage />} />
-            <Route exact path="/signin" element={<SignIn/>} />
-            <Route exact path="/signup" element={<SignUp/>} />
-            <Route path="/user"element={ 
+            <Route path="/" element={<HomePage />} />
+            <Route path="search" element={<SearchPage />} />
+            <Route path="signin" element={<SignIn/>} />
+            <Route path="signup" element={<SignUp/>} />
+            <Route path="user" element={ 
                                 <ProtectedRoute>
                                     <UserPage/> 
                                 </ProtectedRoute>  } >
-                  <Route path="profile"element={ 
+                <Route index element={<ProfilePage />} />
+                <Route path="profile"element={ 
                                 <ProtectedRoute>
                                     <ProfilePage/> 
                                 </ProtectedRoute> } />
@@ -38,6 +39,7 @@ const ProjectRoutes = () => {
                                     <ProtectedRoute>
                                         <SettingsPage/> 
                                     </ProtectedRoute>  }/>
+                <Route path="*" element={<Page404 />} />
             </Route>
             <Route path="*" element={<Page404 />} />
         </Routes>

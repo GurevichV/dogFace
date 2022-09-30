@@ -5,7 +5,6 @@ const UserPage = () => {
     return(
         <div>
             <AccountMenu/>
-            <h1>User Page</h1> 
         </div>
     )
 
