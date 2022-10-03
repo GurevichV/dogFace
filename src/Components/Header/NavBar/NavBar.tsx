@@ -21,7 +21,7 @@ useEffect(() => {
   return (
     <Navbar collapseOnSelect expand="lg"  variant="light">
       <Container>
-        <Navbar.Brand as={Link} to="/">FaceDog</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img src="dogFace/assets/images/logo.png" alt="Logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
