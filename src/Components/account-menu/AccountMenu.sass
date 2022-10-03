@@ -1,6 +1,18 @@
 @import '../../variables' 
-a.nav-link.active
-    color: $blue
 a.nav-link:hover
-    color: $blue
-    
+    color: $orenge
+div.nav.nav-fill
+    box-shadow: 0px 1px 0px #F2F9FF
+    .nav-item
+        .nav-link
+            color: $gray
+        .nav-link.active
+            color: $black
+            box-shadow: 0px 2px 0px $orenge
+@media (max-width: 992px)
+    .nav.nav-fill
+        flex-wrap: nowrap
+        justify-content: center
+        .nav-item
+            .nav-link
+                font-size: 18px

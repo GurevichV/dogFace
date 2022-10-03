@@ -50,7 +50,7 @@ const SignUp = () => {
 
     return (
         <Container>
-            <div className='login-container'>
+            <div className='form-container'>
                 <Row>
                     <Col xs={12} >
                         <h1>Sign Up</h1>
@@ -60,8 +60,8 @@ const SignUp = () => {
                                 return <BasicInput data={item} />
                             })}
 
-                            <button className="button-primary mt-4 mb-4" type="submit">
-                                Submit
+                            <button className="button-primary mt-3 mb-4" type="submit">
+                                Sign up
                             </button>
                         </Form>
                     </Col>
