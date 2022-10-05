@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import BasicInput from './BasicInput';
+import BasicInput from '../basicInput/BasicInput';
 import { setUserInfo } from '../../actions';
 import useApiService from '../../services/api-service';
 import { getSignUpFormModel } from './models/sign-in.model';

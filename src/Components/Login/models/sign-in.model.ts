@@ -1,4 +1,4 @@
-import BasicInput from "../BasicInput";
+import BasicInput from "../../basicInput/BasicInput";
 
 export interface GetSignUpModelConfig {
     values: any;
