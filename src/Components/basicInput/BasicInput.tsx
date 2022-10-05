@@ -1,3 +1,5 @@
+import './BasicInput.sass';
+
 const BasicInput = (props) => {
 
     const { label, values, handleChange, handleBlur, id , type, touched, errors} = props.data

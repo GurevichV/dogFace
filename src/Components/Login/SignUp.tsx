@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import BasicInput from './BasicInput';
+import BasicInput from '../basicInput/BasicInput';
 import useApiService from '../../services/api-service';
 import { getSignUpFormModel } from './models/sign-up.model';
 

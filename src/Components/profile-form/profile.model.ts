@@ -1,4 +1,6 @@
-import BasicInput from "../Login/BasicInput";
+import BasicInput from "../basicInput/BasicInput";
+import ImageInput from "../image-input/ImageInput";
+import VerifyTelInput from "../verify-tel-input/VerifyTelInput";
 
 export interface GetProfileModelConfig {
     values: any;
@@ -46,5 +48,20 @@ export function getProfileFormModel(config: GetProfileModelConfig) {
             touched: touched.profileId,
             errors: errors.profileId
         },
+        {
+            component: VerifyTelInput,
+            id: 'profileVerifyNumber',
+            label: 'Phone Number',
+            values: values.profileVerifyNumber,
+            handleChange,
+            handleBlur,
+            type: 'text',
+            touched: touched.profileVerifyNumber,
+            errors: errors.profileVerifyNumber
+        },
+        {
+            component: ImageInput
+        }
+ 
     ]
 }
