@@ -47,7 +47,7 @@ const ImageInput = () => {
             <div className='image-input__avatar-wrapper mb-4'>
                 {cropped ? 
                     <img className="croped-image" src={cropped} alt="Cropped!"/> : 
-                    <img src='/assets/images/noavatar.png' alt="avatar"/>
+                    <img src='/dogFace/assets/images/noavatar.png' alt="avatar"/>
                 }
             </div>
             {uploaded ?
