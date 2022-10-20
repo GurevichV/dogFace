@@ -1,3 +1,4 @@
+@import '../../variables'
 .wrapper-verify-number
     position: relative
     min-height: 56px
@@ -7,6 +8,8 @@
         width: 62%
         border-top-right-radius: 0
         border-bottom-right-radius: 0
+    .imput-primary.with-country-code
+        padding-left: 9%
     .button-primary
         position: absolute
         right: 0
@@ -15,3 +18,20 @@
         font-weight: 400
         font-size: 20px
         z-index: 3
+    .country-code
+        position: absolute
+        z-index: 5
+        width: 8%
+        height: 100%
+        &__input
+            width: 100%
+            height: 90%
+            border: none
+            margin: 4px
+            color: $black
+            background-color: $light-blue
+            padding-left: 13px
+    .verified-number
+        div
+            input
+                color: $gray 

@@ -1,8 +1,10 @@
+import DogsForm from "../Components/dogs-form/DogsForm";
+
 const DogPage = () => {
 
     return(
         <div>
-            <h1>Dog Page</h1> 
+            <DogsForm/>
         </div>
     )
 

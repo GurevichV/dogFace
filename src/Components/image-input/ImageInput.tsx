@@ -41,7 +41,7 @@ const ImageInput = () => {
       setCropped(cropper.getCroppedCanvas().toDataURL())
       setUploaded(null)
     }
-    console.log(uploaded, 'uploaded')
+    
     return (
         <div className='mb-4 image-input'>
             <div className='image-input__avatar-wrapper mb-4'>

@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import BasicInput from '../basicInput/BasicInput';
 import { setUserInfo } from '../../actions';
 import useApiService from '../../services/api-service';
 import { getSignUpFormModel } from './models/sign-in.model';
@@ -33,8 +32,8 @@ const SignIn = () => {
             const item = { "email": formBasicEmail, "password": formBasicPassword };
             login(item).then((result) => {
                 localStorage.setItem('user-info', JSON.stringify(result));
-                dispatch(setUserInfo(result))
-                navigate('/user/profile')
+                dispatch(setUserInfo(result));
+                navigate('/dashboard/account/profile')
             })
         }
     })

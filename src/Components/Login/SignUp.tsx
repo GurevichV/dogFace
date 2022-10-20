@@ -33,7 +33,7 @@ const SignUp = () => {
         }),
         onSubmit: ({ formBasicEmail, formBasicPassword, firstName }) => {
             const item = {"email":formBasicEmail, "name": firstName, "password": formBasicPassword };
-            registration(item).then((result) => {
+            registration(item).then(() => {
                 navigate('/signin')
             })
 
