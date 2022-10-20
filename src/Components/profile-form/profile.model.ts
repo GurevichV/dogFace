@@ -4,7 +4,7 @@ import VerifyTelInput from "../verify-tel-input/VerifyTelInput";
 
 export interface GetProfileModelConfig {
     values: any;
-    touched: { [key: string]: boolean };
+    touched: any;
     errors: any;
     handleChange: (e: React.ChangeEvent<{ value: any }>) => void;
     handleBlur: (e: React.FocusEvent<any>) => void;
@@ -28,14 +28,14 @@ export function getProfileFormModel(config: GetProfileModelConfig) {
         },
         {
             component: BasicInput,
-            id: 'profileLasttName',
+            id: 'profileLastName',
             label: 'Last Name',
-            values: values.profileLasttName,
+            values: values.profileLastName,
             handleChange,
             handleBlur,
             type: 'text',
-            touched: touched.profileLasttName,
-            errors: errors.profileLasttName
+            touched: touched.profileLastName,
+            errors: errors.profileLastName
         },
         {
             component: BasicInput,

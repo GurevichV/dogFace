@@ -33,7 +33,8 @@ export function getSignUpFormModel(config: GetSignUpModelConfig) {
             handleBlur,
             type: 'password',
             touched: touched.formBasicPassword,
-            errors: errors.formBasicPassword
+            errors: errors.formBasicPassword,
+            autocomplete: 'current-password'
         },
     ]
 }

@@ -1,0 +1,42 @@
+@import '../../variables'
+#sidebar-wrapper
+    box-shadow: inset -1px 0px 0 #eee
+    padding: 0
+    padding-top: 84px
+    .nav
+        .nav-item.dropdown
+            .dropdown-menu.show
+                position: inherit !important
+#sidebar-wrapper .MuiButtonBase-root
+    padding-left: 25%
+    padding-top: 2.5px
+    padding-bottom: 2.5px
+    color: $black
+    transition: all 0.3s
+    a
+        color: $black
+        text-decoration: none
+    a.active
+        color: $orenge
+    .MuiListItemText-root
+        span
+            font-size: 14px   
+    svg
+        color: $light-gray
+        font-size: 35px
+#sidebar-wrapper .MuiButtonBase-root.active
+    background: linear-gradient(270deg, $light-blue 28.44%, $white 100%)
+    color: $orenge
+    a
+        color: $orenge
+#sidebar-wrapper .item-side-menu
+    display: block 
+#sidebar-wrapper .subitem-side-menu a
+    width: 100%
+    text-align: left
+    padding-left: 15px
+    font-size: 12px
+    color: $gray
+@media (max-width: 767px)
+    #sidebar-wrapper
+        display: none

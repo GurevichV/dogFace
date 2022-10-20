@@ -8,7 +8,7 @@ const AccountMenu = () =>{
       <>
         <Nav fill activeKey="profile">
         <Nav.Item>
-          <Nav.Link as={NavLink}  to="profile">Profile</Nav.Link>
+          <Nav.Link as={NavLink} to="profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link as={NavLink} to="my-dogs">Dog</Nav.Link>

@@ -22,10 +22,8 @@ const ProfileMenu = (props) => {
       <>
         <Nav>
             <NavDropdown title={props.name} id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="user/profile">Profile</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="user/my-dogs">My Dog</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="user/dogsitter">Dogsitter</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="user/settings">Settings</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="dashboard/account/profile">My account</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="dashboard/calendar">Calendar</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={logOut} as={Link} to="/signin">Log Out</NavDropdown.Item>
             </NavDropdown>

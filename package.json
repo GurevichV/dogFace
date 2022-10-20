@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.4",
     "@react-google-maps/api": "^2.12.2",
     "@reduxjs/toolkit": "^1.8.5",
@@ -21,12 +22,14 @@
     "bootstrap": "^5.2.1",
     "concurrently": "^7.3.0",
     "cropperjs": "^1.5.12",
+    "dotenv": "^16.0.3",
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-cropper": "^2.1.8",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-phone-number-input": "^3.2.11",
     "react-places-autocomplete": "^7.3.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
@@ -38,7 +41,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d build",
-    "start": "concurrently \"react-scripts start\" \"npx json-server sitters.json --port 3001\"",
+    "start": "set PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
